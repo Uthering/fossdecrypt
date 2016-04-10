@@ -1,0 +1,41 @@
+apply plugin: 'java'
+apply plugin: 'application'
+apply plugin: 'eclipse'
+
+mainClassName = 'Main'
+
+repositories {
+  jcenter()
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+  compile 'commons-codec:commons-codec:1.10'
+  compile 'com.google.code.gson:gson:2.6.2'
+
+  testCompile 'junit:junit:4.12'
+}
+
+jar {
+
+  from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+}
+
+task copyJar(type: Copy) {
+  from jar
+  into "Release"
+}
+
+task copyDeps(type: Copy) {
+//  from configurations.runtime
+  from "config"
+  into "Release"
+}
+
+task wrapper(type: Wrapper) {
+  gradleVersion = '2.9'
+}
+
+build.dependsOn([copyJar, copyDeps])
