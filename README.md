@@ -13,15 +13,17 @@ Distribution to edit sav-files
 
 ## Usage
 After there for windows, no shell file for linux. Yet, you may create it by yourself.
-4. copy there a SAV-file, i.e. **Vault1.sav**
-5. run: **fossed.cmd Vault1.sav**, got a js-file with all your saved data
-6. run: **fossed.cmd Vault1.js**, got a **new.Vault1.sav** with dwellers 10-stats and bunch of weapons & outfits in storage
-7. run: **fossed.cms Vault1.js 30**, got a **new.Vault1.sav** same as in [6], yet with new dwellers up to total of 30
-8. put your **new.Vault1.sav** back to game folder and rename it
+
+1. copy there a SAV-file, i.e. **Vault1.sav**
+2. run: **fossed.cmd Vault1.sav**, got a js-file with all your saved data
+3. run: **fossed.cmd Vault1.js**, got a **new.Vault1.sav** with dwellers 10-stats and bunch of weapons & outfits in storage
+4. run: **fossed.cms Vault1.js 30**, got a **new.Vault1.sav** same as in [3], yet with new dwellers up to total of 30
+5. put your **new.Vault1.sav** back to game folder and rename it
 
 ## Enjoy!
 
 To make changes you may use an Eclipse:
+
 1. run: **gradlew eclipse**
 2. open Eclipse and import the project
 
